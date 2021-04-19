@@ -3,8 +3,8 @@ import { CognitoUserPool } from "amazon-cognito-identity-js";
 
  const Signup = () => {
     const poolData = {
-        UserPoolId: "us-east-2_UN6TnxE9v",
-        ClientId: "5cs4fulu1ord4sbtpckftg15fo",
+      UserPoolId: "us-east-2_5aKWa6vt4",
+      ClientId: "790h1c2mejft1ueehsghrhm4v",
       };
       const UserPool = new CognitoUserPool(poolData);
   const [email, setEmail] = useState("");

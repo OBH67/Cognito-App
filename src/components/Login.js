@@ -4,6 +4,7 @@ import { CognitoUserPool } from "amazon-cognito-identity-js";
 
 const Login = () => {
 
+
     const poolData = {
         UserPoolId: "us-east-2_UN6TnxE9v",
         ClientId: "5cs4fulu1ord4sbtpckftg15fo",
@@ -26,6 +27,8 @@ const Login = () => {
       Username: email,
       Password: password,
     });
+
+    user.setAuthenticationFlowType('USER_PASSWORD_AUTH');
 
     user.authenticateUser(authDetails, {
       onSuccess: (data) => {
@@ -57,7 +60,7 @@ const Login = () => {
         <br />
         <button type="submit">Login</button>
       </form>
-    </div>
+    </div> 
   );
 };
 
