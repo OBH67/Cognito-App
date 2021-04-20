@@ -2,14 +2,18 @@ import './App.css';
 import React from 'react';
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import {Accounts} from './components/Accounts';
+import Status from './components/Status';
+import Settings from './components/Settings';
 
 function App() {
   return (
-    <div className="App">
+    <Accounts>
+      <Status />
       <Signup />
-      <br/> <br/>
       <Login />
-    </div>
+      <Settings />
+    </Accounts>
   );
 }
 
