@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import { CognitoUserPool } from "amazon-cognito-identity-js";
+import UserPool from "../UserPool";
 
  const Signup = () => {
-    const poolData = {
-      UserPoolId: "us-east-2_5aKWa6vt4",
-      ClientId: "790h1c2mejft1ueehsghrhm4v",
-      };
-      const UserPool = new CognitoUserPool(poolData);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +9,7 @@ import { CognitoUserPool } from "amazon-cognito-identity-js";
     event.preventDefault();
 
     UserPool.signUp(email, password, [], null, (err, data) => {
-      if (err) console.log(err);
+      if (err) console.error(err);
       console.log(data);
     });
   };

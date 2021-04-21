@@ -47,6 +47,7 @@ const Accounts = props => {
       user.authenticateUser(authDetails, {
         onSuccess: (data) => {
           console.log("onSuccess:", data);
+          console.log("id_user: ", data.accessToken.payload.username);
           resolve(data);
         },
 
